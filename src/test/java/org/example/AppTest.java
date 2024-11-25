@@ -404,7 +404,7 @@ public class AppTest {
 
     @Test
     public void ManagerCLI7() throws IOException{
-        Manager m1=new Manager("madhav", 5454);
+        Manager m1=new Manager("Frodo", 5454);
         m1.save();
         int ID=Manager.getStaticID()-1;
         String input="1\n1\n"+ID+"\n8\n6\n3\n3\n3\n3\n";
@@ -417,7 +417,7 @@ public class AppTest {
         catch (IOException e) {
             throw new RuntimeException(e);
         }
-        assertEquals("ManagerCLI-7",mainmenu+newline+managermenu+newline+"Enter your Manager ID ('0' to return): "+newline+"\n"+"Manager Menu for madhav"+mmenu+"Command was not understood.\n>"+newline+managermenu+newline+mainmenu+newline+"EXITING LIBRARY...\n"+newline+managermenu+newline+mainmenu+newline+"EXITING LIBRARY...\n",output.toString());
+        assertEquals("ManagerCLI-7",mainmenu+newline+managermenu+newline+"Enter your Manager ID ('0' to return): "+newline+"\n"+"Manager Menu for Frodo"+mmenu+"Command was not understood.\n>"+newline+managermenu+newline+mainmenu+newline+"EXITING LIBRARY...\n"+newline+managermenu+newline+mainmenu+newline+"EXITING LIBRARY...\n",output.toString());
         m1.remove();
         Files.remove(MyManagerFiles.getManager(3));
     }
@@ -428,7 +428,7 @@ public class AppTest {
         MyBookFiles.remove(MyBookFiles.getBook("Skullduggery Pleasant Dark Days", "Derek Landy"));
         MyBookFiles.remove(MyBookFiles.getBook("Skullduggery Pleasant Dark Days", "Derek Landy"));
         MyBookFiles.remove(MyBookFiles.getBook("book1", "Hobbit"));
-        Manager m1=new Manager("madhav", 5454);
+        Manager m1=new Manager("Frodo", 5454);
         m1.save();
         int ID=Manager.getStaticID()-1;
         String input="1\n1\n"+ID+"\n1\n1\n2\n0\n2\nSomeBook\n0\n2\ncha\nchat\n2\ncha\nchat\n3\n0\n3\ncha\n0\n3\ndskfj\nkdlsfj\n3\ncha\nchat\n4\n6\n3\n3\n"+"4\n6\n3\n3\n"+"4\n6\n3\n3\n"+"4\n6\n3\n3\n"+"4\n6\n3\n3\n6\n3\n3\n3\n3\n";
@@ -441,7 +441,7 @@ public class AppTest {
         catch (IOException e) {
             throw new RuntimeException(e);
         }
-        assertEquals("managercli-8", mainmenu+newline+managermenu+newline+"Enter your Manager ID ('0' to return): "+newline+"\nManager Menu for madhav"+mmenu+newline+booksmenu+newline+"No books was found.\n"+newline+booksmenu+newline+"Enter the book's name ('0' to return): "+"\n"+newline+booksmenu+newline+"Enter the book's name ('0' to return): Enter the book's author ('0' to return): "+newline+"Your book, 'SomeBook', written by '0', was added to library." +"\n"+"Book added to system."+"\n"+newline+booksmenu+newline+"Enter the book's name ('0' to return): Enter the book's author ('0' to return): "+newline+"Your book, 'cha', written by 'chat', was added to library." +"\n"+ "Book added to system.\n"+newline+booksmenu+newline+"Enter the book's name ('0' to return): Enter the book's author ('0' to return): "+newline+"This book already exists in the library."+"\n"+newline+booksmenu+newline+"Enter the book's name ('0' to return): "+"\n"+newline+booksmenu+newline+"Enter the book's name ('0' to return): Enter the book's author ('0' to return): "+"\n"+newline+booksmenu+newline+"Enter the book's name ('0' to return): Enter the book's author ('0' to return): "+newline+"No such book was found."+"\n"+newline+booksmenu+newline+"Enter the book's name ('0' to return): Enter the book's author ('0' to return): "+newline+"Your book, 'cha', written by 'chat', was removed from the library."+"\n"+"Book was removed from the system.\n"+newline+booksmenu+newline+"\n"+"Manager Menu for madhav"+mmenu+newline+managermenu+newline+mainmenu+newline+"EXITING LIBRARY..."+"\n>"+newline+"\n"+"Manager Menu for madhav"+mmenu+newline+managermenu+newline+mainmenu+newline+"EXITING LIBRARY..."+"\n>"+newline+"\n"+"Manager Menu for madhav"+mmenu+newline+managermenu+newline+mainmenu+newline+"EXITING LIBRARY..."+"\n>"+newline+"\n"+"Manager Menu for madhav"+mmenu+newline+managermenu+newline+mainmenu+newline+"EXITING LIBRARY..."+"\n>"+newline+"\n"+"Manager Menu for madhav"+mmenu+newline+managermenu+newline+mainmenu+newline+"EXITING LIBRARY..."+"\n>"+newline+managermenu+newline+mainmenu+newline+"EXITING LIBRARY..."+"\n"+newline+managermenu+newline+mainmenu+newline+"EXITING LIBRARY..."+"\n", output.toString());
+        assertEquals("managercli-8", mainmenu+newline+managermenu+newline+"Enter your Manager ID ('0' to return): "+newline+"\nManager Menu for Frodo"+mmenu+newline+booksmenu+newline+"No books was found.\n"+newline+booksmenu+newline+"Enter the book's name ('0' to return): "+"\n"+newline+booksmenu+newline+"Enter the book's name ('0' to return): Enter the book's author ('0' to return): "+newline+"Your book, 'SomeBook', written by '0', was added to library." +"\n"+"Book added to system."+"\n"+newline+booksmenu+newline+"Enter the book's name ('0' to return): Enter the book's author ('0' to return): "+newline+"Your book, 'cha', written by 'chat', was added to library." +"\n"+ "Book added to system.\n"+newline+booksmenu+newline+"Enter the book's name ('0' to return): Enter the book's author ('0' to return): "+newline+"This book already exists in the library."+"\n"+newline+booksmenu+newline+"Enter the book's name ('0' to return): "+"\n"+newline+booksmenu+newline+"Enter the book's name ('0' to return): Enter the book's author ('0' to return): "+"\n"+newline+booksmenu+newline+"Enter the book's name ('0' to return): Enter the book's author ('0' to return): "+newline+"No such book was found."+"\n"+newline+booksmenu+newline+"Enter the book's name ('0' to return): Enter the book's author ('0' to return): "+newline+"Your book, 'cha', written by 'chat', was removed from the library."+"\n"+"Book was removed from the system.\n"+newline+booksmenu+newline+"\n"+"Manager Menu for Frodo"+mmenu+newline+managermenu+newline+mainmenu+newline+"EXITING LIBRARY..."+"\n>"+newline+"\n"+"Manager Menu for Frodo"+mmenu+newline+managermenu+newline+mainmenu+newline+"EXITING LIBRARY..."+"\n>"+newline+"\n"+"Manager Menu for Frodo"+mmenu+newline+managermenu+newline+mainmenu+newline+"EXITING LIBRARY..."+"\n>"+newline+"\n"+"Manager Menu for Frodo"+mmenu+newline+managermenu+newline+mainmenu+newline+"EXITING LIBRARY..."+"\n>"+newline+"\n"+"Manager Menu for Frodo"+mmenu+newline+managermenu+newline+mainmenu+newline+"EXITING LIBRARY..."+"\n>"+newline+managermenu+newline+mainmenu+newline+"EXITING LIBRARY..."+"\n"+newline+managermenu+newline+mainmenu+newline+"EXITING LIBRARY..."+"\n", output.toString());
         m1.remove();
     }
 
@@ -464,7 +464,7 @@ public class AppTest {
     @Test
     public void MembersCLI2() throws IOException {
         int ID=Member.getStaticID()-1;
-        String input = "2\n2\n0\n2\nMadhav\n0\n2\nMadhav\n880\n" + "1\n" + "0\n1\n" + (ID+1) + "\n3\n3\n3\n3\n3\n";
+        String input = "2\n2\n0\n2\nFrodo\n0\n2\nFrodo\n880\n" + "1\n" + "0\n1\n" + (ID+1) + "\n3\n3\n3\n3\n3\n";
         System.setIn(new ByteArrayInputStream(input.getBytes()));
         ByteArrayOutputStream output = new ByteArrayOutputStream();
         System.setOut(new PrintStream(output));
@@ -474,7 +474,7 @@ public class AppTest {
         catch (IOException e) {
             throw new RuntimeException(e);
         }
-        assertEquals("MemberCLI-2", mainmenu + newline + membermenu + newline + "Enter your name ('0' to return): " + newline + membermenu + newline + "Enter your name ('0' to return): " + "Enter your nationalCode ('0' to return): " + newline + membermenu + newline + "Enter your name ('0' to return): " + "Enter your nationalCode ('0' to return): " + newline + "Your Member ID is '" + (ID+1) + "'. Please memorise it.\n" + "Member added to system.\n" + newline + membermenu + newline + "Enter your Member ID ('0' to return): " + newline + membermenu + newline + "Enter your Member ID ('0' to return): " + newline + membermenu("Madhav") + newline + membermenu + newline + mainmenu + newline + "EXITING LIBRARY..." + "\n" + newline + membermenu + newline + mainmenu + newline + "EXITING LIBRARY..." + "\n", output.toString());
+        assertEquals("MemberCLI-2", mainmenu + newline + membermenu + newline + "Enter your name ('0' to return): " + newline + membermenu + newline + "Enter your name ('0' to return): " + "Enter your nationalCode ('0' to return): " + newline + membermenu + newline + "Enter your name ('0' to return): " + "Enter your nationalCode ('0' to return): " + newline + "Your Member ID is '" + (ID+1) + "'. Please memorise it.\n" + "Member added to system.\n" + newline + membermenu + newline + "Enter your Member ID ('0' to return): " + newline + membermenu + newline + "Enter your Member ID ('0' to return): " + newline + membermenu("Frodo") + newline + membermenu + newline + mainmenu + newline + "EXITING LIBRARY..." + "\n" + newline + membermenu + newline + mainmenu + newline + "EXITING LIBRARY..." + "\n", output.toString());
         output.close();
         Member m1=MyMemberFiles.getMember(ID+1);
         Files.remove(m1);

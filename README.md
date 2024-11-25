@@ -7,7 +7,7 @@
 </p>
 
 # Problem Description
-**Aim**:To perform Mutation Testing on a source code. Here, the mutated program needs to be strongly killed by the designed test suite. At least 80% of the mutants should be killed.
+**Aim**:To perform Mutation Testing on a source code. Here, the mutated program needs to be strongly killed by the designed test suite.
 
 # PITest Report
 ![image](image.png)
